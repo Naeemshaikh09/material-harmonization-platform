@@ -131,8 +131,8 @@ See [COLLABORATION_GUIDE.md](./COLLABORATION_GUIDE.md) for complete workflow.
 
 - [COLLABORATION_GUIDE.md](./COLLABORATION_GUIDE.md) - GitHub workflow
 - [PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md) - Directory structure
-- [implementation.md](../implementation.md) - Implementation plan
-- [detailed_plan.md](../detailed_plan.md) - Technical details
+- [implementation.md](./docs/implementation.md) - Implementation plan
+- [detailed_plan.md](./docs/detailed_plan.md) - Technical details
 
 ## 🔒 Security
 
@@ -156,7 +156,7 @@ See [COLLABORATION_GUIDE.md](./COLLABORATION_GUIDE.md) for complete workflow.
 
 ## 📊 Milestones
 
-- ✅ **Milestone 1** (End Phase 1): Skeleton on mocks
+- ⏳ **Milestone 1** (End Phase 1): Skeleton on mocks
 - ⏳ **Milestone 2** (End Phase 4): All screens on mocks
 - ⏳ **Milestone 3** (End Phase 5): Real backend integrated
 - ⏳ **Demo-ready** (End Phase 6): Full demo rehearsed
