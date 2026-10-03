@@ -1,0 +1,19 @@
+# CODEOWNERS - Auto-assign reviewers
+
+# All files default to you (Owner/Admin/Dev3)
+* @Naeemshaikh09
+
+# Frontend needs your review + one more
+/frontend/ @Naeemshaikh09 @dev1
+
+# Backend needs Dev1's input
+/backend/ @Naeemshaikh09 @dev1
+
+# ML needs Dev2's expertise
+/ml/ @Naeemshaikh09 @dev2
+
+# Data needs Dev4's review
+/data/ @Naeemshaikh09 @dev4
+
+# Contracts need ALL 4 developers
+/contracts/ @Naeemshaikh09 @dev1 @dev2 @dev4

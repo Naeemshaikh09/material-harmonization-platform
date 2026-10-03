@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+.env
+*.pem
+.coverage
+.pytest_cache/
+htmlcov/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+build/
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Database
+*.db
+*.sqlite3
+postgres-data/
+
+# ML
+*.pth
+*.ckpt
+ml/data/raw/
+ml/models/checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Keep examples
+!.env.example
