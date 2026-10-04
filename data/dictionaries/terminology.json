@@ -1,0 +1,37 @@
+{
+  "_comment": "Terminology dictionary — owned by developer4. This is an empty template. developer4 fills entries.",
+  "version": 1,
+  "entries": [
+    {
+      "_comment_example": "Each entry has: term, replacement, kind, version, active",
+      "term": "VLV",
+      "replacement": "VALVE",
+      "kind": "ABBREVIATION",
+      "version": 1,
+      "active": true
+    },
+    {
+      "term": "FLGD",
+      "replacement": "FLANGED",
+      "kind": "ABBREVIATION",
+      "version": 1,
+      "active": true
+    },
+    {
+      "term": "150#",
+      "replacement": "CL150",
+      "kind": "RATING",
+      "version": 1,
+      "active": true
+    },
+    {
+      "term": "IN",
+      "replacement": "MM",
+      "kind": "UNIT",
+      "version": 1,
+      "active": true,
+      "conversion_factor": 25.4,
+      "canonical_unit": "MM"
+    }
+  ]
+}

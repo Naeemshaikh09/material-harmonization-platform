@@ -1,0 +1,60 @@
+[
+  {
+    "_comment": "Labelled extraction set for valves — owned by developer4. This file needs 300+ entries.",
+    "item_id": "V001",
+    "raw_text": "BALL VLV 2IN CL150 SS316 FLG",
+    "class_code": "0112",
+    "subclass_code": "0003",
+    "attributes": {
+      "type": {"value": "BALL", "unit": null, "state": "KNOWN", "source_span": "BALL"},
+      "primary_size": {"value": "50", "unit": "MM", "state": "KNOWN", "source_span": "2IN"},
+      "pressure": {"value": "150", "unit": "CLASS", "state": "KNOWN", "source_span": "CL150"},
+      "material": {"value": "SS316", "unit": null, "state": "KNOWN", "source_span": "SS316"},
+      "connection": {"value": "FLANGED", "unit": null, "state": "KNOWN", "source_span": "FLG"},
+      "length": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "thickness": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "secondary_material": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "temperature": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "flow": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "electrical": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "mechanical_loading": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "stiffness_hardness": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "actuation": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "standard": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "protection": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "measurement": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "coating": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "manufacturer_part": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "uom": {"value": "EA", "unit": null, "state": "UNKNOWN", "source_span": null}
+    }
+  },
+  {
+    "_comment": "developer4: add 300+ more entries like this one below",
+    "item_id": "V002",
+    "raw_text": "GATE VALVE 4 INCH 300# CS A216 WCB BUTT WELD",
+    "class_code": "0112",
+    "subclass_code": "0001",
+    "attributes": {
+      "type": {"value": "GATE", "unit": null, "state": "KNOWN", "source_span": "GATE"},
+      "primary_size": {"value": "100", "unit": "MM", "state": "KNOWN", "source_span": "4 INCH"},
+      "pressure": {"value": "300", "unit": "CLASS", "state": "KNOWN", "source_span": "300#"},
+      "material": {"value": "A216WCB", "unit": null, "state": "KNOWN", "source_span": "A216 WCB"},
+      "connection": {"value": "BUTT_WELD", "unit": null, "state": "KNOWN", "source_span": "BUTT WELD"},
+      "length": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "thickness": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "secondary_material": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "temperature": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "flow": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "electrical": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "mechanical_loading": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "stiffness_hardness": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "actuation": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "standard": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "protection": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "measurement": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "coating": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "manufacturer_part": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "uom": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null}
+    }
+  }
+]
