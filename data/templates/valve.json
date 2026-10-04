@@ -1,0 +1,113 @@
+{
+  "_comment": "Valve class template — owned by developer4. Placeholder for developer4 to complete.",
+  "class_code": "0112",
+  "class_name": "VALVE",
+  "version": 1,
+  "status": "DRAFT",
+  "validated_by": null,
+  "_validation_note": "Not yet reviewed by an engineer. Label as unvalidated in demo.",
+  "dimensions": {
+    "type": {
+      "applicable": true,
+      "critical": true,
+      "code_table": "subclass_valve",
+      "description": "Valve type e.g. BALL, GATE, GLOBE"
+    },
+    "primary_size": {
+      "applicable": true,
+      "critical": true,
+      "code_table": "size",
+      "description": "Nominal bore in MM"
+    },
+    "length": {
+      "applicable": false,
+      "critical": false,
+      "description": "Not applicable for valves"
+    },
+    "thickness": {
+      "applicable": false,
+      "critical": false,
+      "description": "Not applicable for standard valves"
+    },
+    "material": {
+      "applicable": true,
+      "critical": true,
+      "code_table": "material",
+      "description": "Body material e.g. SS316, A216WCB"
+    },
+    "secondary_material": {
+      "applicable": true,
+      "critical": false,
+      "description": "Trim or seat material"
+    },
+    "pressure": {
+      "applicable": true,
+      "critical": true,
+      "code_table": "pressure",
+      "description": "Pressure class or rating e.g. CL150, PN16"
+    },
+    "temperature": {
+      "applicable": true,
+      "critical": false,
+      "description": "Operating temperature range"
+    },
+    "flow": {
+      "applicable": false,
+      "critical": false
+    },
+    "electrical": {
+      "applicable": false,
+      "critical": false
+    },
+    "mechanical_loading": {
+      "applicable": false,
+      "critical": false
+    },
+    "stiffness_hardness": {
+      "applicable": false,
+      "critical": false
+    },
+    "connection": {
+      "applicable": true,
+      "critical": true,
+      "code_table": "connection",
+      "description": "End connection type e.g. FLANGED, BUTT_WELD"
+    },
+    "actuation": {
+      "applicable": true,
+      "critical": false,
+      "description": "e.g. MANUAL, MOTOR_OPERATED"
+    },
+    "standard": {
+      "applicable": true,
+      "critical": false,
+      "description": "Governing standard e.g. ASME B16.34, API 6D"
+    },
+    "protection": {
+      "applicable": false,
+      "critical": false
+    },
+    "measurement": {
+      "applicable": false,
+      "critical": false
+    },
+    "coating": {
+      "applicable": false,
+      "critical": false
+    },
+    "manufacturer_part": {
+      "applicable": true,
+      "critical": false,
+      "description": "Manufacturer part number if specified"
+    },
+    "uom": {
+      "applicable": true,
+      "critical": false,
+      "description": "Unit of measure e.g. EA, NOS"
+    }
+  },
+  "description_template": {
+    "short": "VALVE,{type},{primary_size},{pressure},{material},{connection}",
+    "long": "VALVE, {type}, {primary_size} ({primary_size_inch}), {pressure}, {material}, {connection}"
+  }
+}

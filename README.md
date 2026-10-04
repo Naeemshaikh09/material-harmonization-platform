@@ -13,7 +13,7 @@ CPSEs use different codes for the same materials, causing duplicates, excess sto
 - Docker (optional)
 
 ### Setup
-~~~bash
+```bash
 # Clone repository
 git clone https://github.com/Naeemshaikh09/material-harmonization-platform.git
 cd material-harmonization-platform
@@ -33,7 +33,7 @@ npm run dev
 
 # Docker (alternative)
 docker compose up
-~~~
+```
 
 ## 👥 Team Structure
 
@@ -60,21 +60,21 @@ See [PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md) for detailed structure.
 ## 🔄 Development Workflow
 
 ### 1. Create Feature Branch
-~~~bash
+```bash
 git checkout -b devN/<area>/<task>
 # Examples:
 # dev1/backend/api-setup
 # dev2/ml/extractor
 # dev3/frontend/login-page
 # dev4/data/valve-templates
-~~~
+```
 
 ### 2. Work & Commit
-~~~bash
+```bash
 git add <specific-files>
 git commit -m "feat: description"
 git push origin your-branch
-~~~
+```
 
 ### 3. Create Pull Request
 - Go to GitHub

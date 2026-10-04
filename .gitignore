@@ -4,16 +4,24 @@ __pycache__/
 *$py.class
 *.so
 .Python
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+htmlcov/
+*.egg-info/
+
+# Virtual environments
 venv/
 env/
 ENV/
 .venv
+ml_venv/
+
+# Environment files
 .env
+.env.*
 *.pem
-.coverage
-.pytest_cache/
-htmlcov/
-*.egg-info/
 
 # Node
 node_modules/
@@ -32,11 +40,23 @@ build/
 *.sqlite3
 postgres-data/
 
-# ML
+# ML — model weights (too large for git)
 *.pth
+*.pt
+*.bin
+*.safetensors
 *.ckpt
 ml/data/raw/
 ml/models/checkpoints/
+ml/train/output/
+
+# Training data splits (generated — not source)
+ml/train/train.jsonl
+ml/train/dev.jsonl
+ml/train/test.jsonl
+
+# Eval results
+ml/eval/results/
 
 # OS
 .DS_Store

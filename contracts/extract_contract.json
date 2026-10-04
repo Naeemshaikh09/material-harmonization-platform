@@ -1,0 +1,38 @@
+{
+  "title": "Extraction API Contract",
+  "description": "Contract for POST /extract. Returns KNOWN or UNKNOWN only. NA is applied by the canonicalizer, never by this service.",
+  "request": {
+    "text": "string (required) - raw item description",
+    "cpse_id": "integer or null",
+    "class_hint": "string or null"
+  },
+  "response": {
+    "class_code": "string or null - 4-digit e.g. 0112",
+    "subclass_code": "string or null - 4-digit e.g. 0003",
+    "class_confidence": "float 0-1",
+    "attributes": {
+      "_note": "20 dimensions. Each attribute has value, unit, state (KNOWN|UNKNOWN only), confidence, source_span",
+      "type": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "primary_size": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "length": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "thickness": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "material": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "secondary_material": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "pressure": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "temperature": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "flow": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "electrical": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "mechanical_loading": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "stiffness_hardness": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "connection": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "actuation": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "standard": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "protection": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "measurement": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "coating": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "manufacturer_part": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"},
+      "uom": {"value": "string|null", "unit": "string|null", "state": "KNOWN|UNKNOWN", "confidence": "float", "source_span": "string|null"}
+    },
+    "model_version": "string e.g. rules-v1 or rules-v1+slm-v1"
+  }
+}

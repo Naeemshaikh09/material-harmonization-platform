@@ -1,33 +1,61 @@
-version: '3.8'
+version: '3.9'
 
 services:
-  # PostgreSQL Database
+  # ── PostgreSQL ────────────────────────────────────────────────
   postgres:
-    image: postgres:15-alpine
+    image: postgres:16
     container_name: material-platform-db
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
-      POSTGRES_DB: ${POSTGRES_DB:-material_platform}
+      POSTGRES_USER: ${POSTGRES_USER:-nmip_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-nmip_pass}
+      POSTGRES_DB: ${POSTGRES_DB:-nmip}
     ports:
       - "5432:5432"
     volumes:
-      - postgres-data:/var/lib/postgresql/data
-      - ./backend/app/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-nmip_user} -d ${POSTGRES_DB:-nmip}"]
       interval: 10s
       timeout: 5s
       retries: 5
 
-  # Backend API
+  # ── ML / Extraction service (developer2 - jayedshaikh) ───────
+  ml-service:
+    build:
+      context: .
+      dockerfile: ml/service/Dockerfile
+    container_name: material-platform-ml
+    environment:
+      MODEL_PATH: ${ML_MODEL_PATH:-""}
+      MODEL_TYPE: ${ML_MODEL_TYPE:-seq2seq}
+      MODEL_VERSION: ${ML_MODEL_VERSION:-slm-v1}
+      CONFIDENCE_THRESHOLD: "0.50"
+      TERMINOLOGY_DICT_PATH: "/app/data/dictionaries/terminology.json"
+      TEMPLATES_DIR: "/app/data/templates"
+      CODE_TABLES_DIR: "/app/data/code_tables"
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./data:/app/data:ro
+      - model_weights:/app/models
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import httpx; httpx.get('http://localhost:8001/health').raise_for_status()\""]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+  # ── Backend API (developer1 - piyush) ─────────────────────────
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
     container_name: material-platform-backend
     environment:
-      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-material_platform}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-nmip_user}:${POSTGRES_PASSWORD:-nmip_pass}@postgres:5432/${POSTGRES_DB:-nmip}
       ML_SERVICE_URL: http://ml-service:8001
       SECRET_KEY: ${SECRET_KEY:-dev-secret-key-change-in-production}
     ports:
@@ -38,25 +66,11 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+      ml-service:
+        condition: service_healthy
     command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
-  # ML Extraction Service
-  ml-service:
-    build:
-      context: ./ml
-      dockerfile: Dockerfile
-    container_name: material-platform-ml
-    environment:
-      MODEL_PATH: ${ML_MODEL_PATH:-/app/models/extraction_model.pth}
-      MODEL_VERSION: ${ML_MODEL_VERSION:-v1}
-    ports:
-      - "8001:8001"
-    volumes:
-      - ./ml:/app
-      - ./data:/app/data
-    command: uvicorn service.api:app --host 0.0.0.0 --port 8001 --reload
-
-  # Frontend
+  # ── Frontend (developer3 - naeem) ─────────────────────────────
   frontend:
     build:
       context: ./frontend
@@ -69,11 +83,13 @@ services:
     volumes:
       - ./frontend:/app
       - /app/node_modules
+    depends_on:
+      - backend
     command: npm run dev -- --host 0.0.0.0
 
 volumes:
-  postgres-data:
-    driver: local
+  postgres_data:
+  model_weights:
 
 networks:
   default:

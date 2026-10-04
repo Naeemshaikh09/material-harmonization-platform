@@ -1,0 +1,31 @@
+[
+  {
+    "_comment": "Synthetic messy variants — owned by developer4. Each item_id matches an entry in extraction_valve.json.",
+    "item_id": "V001",
+    "raw_text": "VLV BALL 2\\\" 150# SS 316 FLGD",
+    "class_code": "0112",
+    "subclass_code": "0003",
+    "attributes": {
+      "type": {"value": "BALL", "unit": null, "state": "KNOWN", "source_span": "BALL"},
+      "primary_size": {"value": "50", "unit": "MM", "state": "KNOWN", "source_span": "2\\\""},
+      "pressure": {"value": "150", "unit": "CLASS", "state": "KNOWN", "source_span": "150#"},
+      "material": {"value": "SS316", "unit": null, "state": "KNOWN", "source_span": "SS 316"},
+      "connection": {"value": "FLANGED", "unit": null, "state": "KNOWN", "source_span": "FLGD"},
+      "length": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "thickness": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "secondary_material": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "temperature": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "flow": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "electrical": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "mechanical_loading": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "stiffness_hardness": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "actuation": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "standard": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "protection": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "measurement": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "coating": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "manufacturer_part": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null},
+      "uom": {"value": null, "unit": null, "state": "UNKNOWN", "source_span": null}
+    }
+  }
+]
