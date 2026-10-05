@@ -412,14 +412,27 @@ export const api = {
     await sleep(240);
     const needle = q.trim().toLowerCase();
     const items = goldenRecords
-      .filter(
-        (g) =>
-          !needle ||
-          g.code.toLowerCase().includes(needle) ||
-          g.description.long.toLowerCase().includes(needle) ||
-          g.cpse_links.some((l) => l.code.toLowerCase().includes(needle)),
+      .filter((g) =>
+        !needle ||
+        g.code.toLowerCase().includes(needle) ||
+        g.description.long.toLowerCase().includes(needle) ||
+        g.description.short.toLowerCase().includes(needle) ||
+        g.class.toLowerCase().includes(needle) ||
+        g.subclass.toLowerCase().includes(needle) ||
+        g.cpse_links.some(
+          (l) =>
+            l.code.toLowerCase().includes(needle) ||
+            l.cpse.toLowerCase().includes(needle) ||
+            l.raw_description.toLowerCase().includes(needle),
+        ),
       )
-      .map((g) => ({ cmc: g.code, description: g.description.long, cpse_count: g.cpse_links.length, class: g.class, status: g.status }));
+      .map((g) => ({
+        cmc: g.code,
+        description: g.description.long,
+        cpse_count: g.cpse_links.length,
+        class: g.class,
+        status: g.status,
+      }));
     return { total: items.length, page, items };
   },
 

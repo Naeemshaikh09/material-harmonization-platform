@@ -14,16 +14,27 @@ export default function Golden() {
   const [items, setItems] = useState<SearchHit[] | null>(null);
   const [statusFilter, setStatusFilter] = useState<"ALL" | "ACTIVE" | "SUPERSEDED">("ALL");
 
+  // Sync search box when URL param changes (e.g. topbar ⌘K search)
   useEffect(() => {
-    setQ(params.get("q") ?? "");
+    const paramQ = params.get("q") ?? "";
+    setQ((prev) => (prev !== paramQ ? paramQ : prev));
   }, [params]);
 
+  // Run search — debounced so fast typing doesn't stack requests
   useEffect(() => {
     let alive = true;
+    // Show skeleton immediately when query changes
     setItems(null);
-    api.search(q).then((r) => alive && setItems(r.items));
+
+    const timer = setTimeout(() => {
+      api.search(q).then((r) => {
+        if (alive) setItems(r.items);
+      });
+    }, q.trim() ? 220 : 0); // no debounce for empty query (initial load)
+
     return () => {
       alive = false;
+      clearTimeout(timer);
     };
   }, [q]);
 
