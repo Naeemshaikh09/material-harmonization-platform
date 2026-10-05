@@ -1,0 +1,9 @@
+{
+  "name": "subclass_pipe",
+  "values": [
+    {"code": "0000", "label": "N/A", "canonical": "NA", "status": "ACTIVE"},
+    {"code": "0010", "label": "SEAMLESS PIPE", "canonical": "SEAMLESS", "status": "ACTIVE"},
+    {"code": "0011", "label": "ERW PIPE", "canonical": "ERW", "status": "ACTIVE"},
+    {"code": "0012", "label": "SPIRAL WELD PIPE", "canonical": "SPIRAL_WELD", "status": "ACTIVE"}
+  ]
+}

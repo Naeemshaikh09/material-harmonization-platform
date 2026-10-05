@@ -1,0 +1,106 @@
+{
+  "class_code": "0113",
+  "class_name": "PIPE",
+  "version": 1,
+  "status": "ACTIVE",
+  "validated_by": "Eng. R. Sharma (CPSE Lead)",
+  "dimensions": {
+    "type": {
+      "applicable": true,
+      "critical": true,
+      "code_table": "subclass_pipe",
+      "description": "Pipe type e.g. SEAMLESS, ERW, SPIRAL_WELD"
+    },
+    "primary_size": {
+      "applicable": true,
+      "critical": true,
+      "code_table": "size",
+      "description": "Nominal diameter in MM (e.g. 50, 100, 150)"
+    },
+    "length": {
+      "applicable": true,
+      "critical": false,
+      "description": "Standard length in meters e.g. 6M, 12M"
+    },
+    "thickness": {
+      "applicable": true,
+      "critical": true,
+      "code_table": "schedule",
+      "description": "Wall thickness schedule e.g. SCH40, SCH80, SCH160"
+    },
+    "material": {
+      "applicable": true,
+      "critical": true,
+      "code_table": "material",
+      "description": "Material grade e.g. A106B, SS316L, API5L_X52"
+    },
+    "secondary_material": {
+      "applicable": false,
+      "critical": false
+    },
+    "pressure": {
+      "applicable": false,
+      "critical": false
+    },
+    "temperature": {
+      "applicable": false,
+      "critical": false
+    },
+    "flow": {
+      "applicable": false,
+      "critical": false
+    },
+    "electrical": {
+      "applicable": false,
+      "critical": false
+    },
+    "mechanical_loading": {
+      "applicable": false,
+      "critical": false
+    },
+    "stiffness_hardness": {
+      "applicable": false,
+      "critical": false
+    },
+    "connection": {
+      "applicable": true,
+      "critical": false,
+      "description": "End prep e.g. BEVELED, PLAIN_END"
+    },
+    "actuation": {
+      "applicable": false,
+      "critical": false
+    },
+    "standard": {
+      "applicable": true,
+      "critical": false,
+      "description": "Standard specification e.g. ASTM A106, API 5L"
+    },
+    "protection": {
+      "applicable": false,
+      "critical": false
+    },
+    "measurement": {
+      "applicable": false,
+      "critical": false
+    },
+    "coating": {
+      "applicable": true,
+      "critical": false,
+      "description": "Coating e.g. GALVANIZED, 3LPE, EPOXY"
+    },
+    "manufacturer_part": {
+      "applicable": false,
+      "critical": false
+    },
+    "uom": {
+      "applicable": true,
+      "critical": false,
+      "description": "Unit of measure e.g. MTR, FT"
+    }
+  },
+  "description_template": {
+    "short": "PIPE,{type},{primary_size},{thickness},{material}",
+    "long": "PIPE, {type}, {primary_size} ({primary_size_inch}), {thickness}, {material}, {connection}"
+  }
+}

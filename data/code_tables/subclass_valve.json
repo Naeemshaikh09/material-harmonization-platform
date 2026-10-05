@@ -1,0 +1,14 @@
+{
+  "name": "subclass_valve",
+  "values": [
+    {"code": "0000", "label": "N/A", "canonical": "NA", "status": "ACTIVE"},
+    {"code": "0001", "label": "GATE VALVE", "canonical": "GATE", "status": "ACTIVE"},
+    {"code": "0002", "label": "GLOBE VALVE", "canonical": "GLOBE", "status": "ACTIVE"},
+    {"code": "0003", "label": "BALL VALVE", "canonical": "BALL", "status": "ACTIVE"},
+    {"code": "0004", "label": "CHECK VALVE", "canonical": "CHECK", "status": "ACTIVE"},
+    {"code": "0005", "label": "BUTTERFLY VALVE", "canonical": "BUTTERFLY", "status": "ACTIVE"},
+    {"code": "0006", "label": "PLUG VALVE", "canonical": "PLUG", "status": "ACTIVE"},
+    {"code": "0007", "label": "NEEDLE VALVE", "canonical": "NEEDLE", "status": "ACTIVE"},
+    {"code": "0008", "label": "SAFETY RELIEF VALVE", "canonical": "SAFETY_RELIEF", "status": "ACTIVE"}
+  ]
+}

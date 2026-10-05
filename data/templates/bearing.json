@@ -1,0 +1,103 @@
+{
+  "class_code": "0114",
+  "class_name": "BEARING",
+  "version": 1,
+  "status": "ACTIVE",
+  "validated_by": "Eng. S. Patel (Maintenance Lead)",
+  "dimensions": {
+    "type": {
+      "applicable": true,
+      "critical": true,
+      "code_table": "subclass_bearing",
+      "description": "Bearing type e.g. DEEP_GROOVE, TAPERED_ROLLER, SPHERICAL_ROLLER"
+    },
+    "primary_size": {
+      "applicable": true,
+      "critical": true,
+      "code_table": "size",
+      "description": "Bore inner diameter in MM e.g. 25, 50, 80"
+    },
+    "length": {
+      "applicable": false,
+      "critical": false
+    },
+    "thickness": {
+      "applicable": false,
+      "critical": false
+    },
+    "material": {
+      "applicable": true,
+      "critical": false,
+      "description": "Bearing material e.g. CHROME_STEEL, STAINLESS_STEEL"
+    },
+    "secondary_material": {
+      "applicable": false,
+      "critical": false
+    },
+    "pressure": {
+      "applicable": false,
+      "critical": false
+    },
+    "temperature": {
+      "applicable": false,
+      "critical": false
+    },
+    "flow": {
+      "applicable": false,
+      "critical": false
+    },
+    "electrical": {
+      "applicable": false,
+      "critical": false
+    },
+    "mechanical_loading": {
+      "applicable": true,
+      "critical": true,
+      "description": "Load capacity / Clearance e.g. C3, C4, NORMAL"
+    },
+    "stiffness_hardness": {
+      "applicable": false,
+      "critical": false
+    },
+    "connection": {
+      "applicable": false,
+      "critical": false
+    },
+    "actuation": {
+      "applicable": false,
+      "critical": false
+    },
+    "standard": {
+      "applicable": true,
+      "critical": false,
+      "description": "Standard designation e.g. ISO 15, DIN 625"
+    },
+    "protection": {
+      "applicable": true,
+      "critical": true,
+      "description": "Seal type e.g. 2RS, 2Z, OPEN"
+    },
+    "measurement": {
+      "applicable": false,
+      "critical": false
+    },
+    "coating": {
+      "applicable": false,
+      "critical": false
+    },
+    "manufacturer_part": {
+      "applicable": true,
+      "critical": true,
+      "description": "ISO/Manufacturer Part No. e.g. 6205-2RS, 32210"
+    },
+    "uom": {
+      "applicable": true,
+      "critical": false,
+      "description": "Unit of measure e.g. EA, SET"
+    }
+  },
+  "description_template": {
+    "short": "BEARING,{type},{primary_size},{protection},{manufacturer_part}",
+    "long": "BEARING, {type}, Bore {primary_size}MM, Shield/Seal {protection}, Part No. {manufacturer_part}"
+  }
+}

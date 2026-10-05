@@ -1,0 +1,9 @@
+{
+  "name": "subclass_bearing",
+  "values": [
+    {"code": "0000", "label": "N/A", "canonical": "NA", "status": "ACTIVE"},
+    {"code": "0020", "label": "DEEP GROOVE BALL BEARING", "canonical": "DEEP_GROOVE", "status": "ACTIVE"},
+    {"code": "0021", "label": "TAPERED ROLLER BEARING", "canonical": "TAPERED_ROLLER", "status": "ACTIVE"},
+    {"code": "0022", "label": "SPHERICAL ROLLER BEARING", "canonical": "SPHERICAL_ROLLER", "status": "ACTIVE"}
+  ]
+}

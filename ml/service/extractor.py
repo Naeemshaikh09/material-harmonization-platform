@@ -15,8 +15,13 @@ from __future__ import annotations
 import re
 from typing import Dict, Optional, Tuple
 
-from .dictionary import TerminologyDictionary, get_dictionary
-from .schemas import AttributeResult
+try:
+    from .dictionary import TerminologyDictionary, get_dictionary
+    from .schemas import AttributeResult
+except ImportError:
+    from dictionary import TerminologyDictionary, get_dictionary
+    from schemas import AttributeResult
+
 
 RULES_VERSION = "rules-v1"
 
@@ -232,15 +237,15 @@ def extract_material(text: str, dictionary: TerminologyDictionary) -> AttributeR
 # --- connection ---
 _CONNECTION_PATTERNS = [
     (r"\bFLANGED?\b|\bFLNG\b|\bFLGD\b|\bFLG\b",   "FLANGED",     0.97),
-    (r"\bBUTT\s*WELD\b|\bBW\b",                    "BUTT_WELD",   0.97),
-    (r"\bSOCKET\s*WELD\b|\bSW\b|\bSKTW\b",         "SOCKET_WELD", 0.97),
+    (r"\bBUTT[_\s]*WELD\b|\bBW\b",                "BUTT_WELD",   0.97),
+    (r"\bSOCKET[_\s]*WELD\b|\bSW\b|\bSKTW\b",     "SOCKET_WELD", 0.97),
     (r"\bTHREADED\b|\bTHRD\b|\bTHD\b|\bSCRD\b",   "THREADED",    0.95),
-    (r"\bNPT\b",                                    "NPT",         0.97),
-    (r"\bBSP\b|\bBSPT\b",                           "BSP",         0.97),
-    (r"\bWAFER\b",                                  "WAFER",       0.95),
-    (r"\bLUG\b",                                    "LUG",         0.95),
-    (r"\bCLAMP\b",                                  "CLAMP",       0.90),
-    (r"\bCOMPRESS(?:ION)?\b",                       "COMPRESSION", 0.90),
+    (r"\bNPT\b",                                  "NPT",         0.97),
+    (r"\bBSP\b|\bBSPT\b",                         "BSP",         0.97),
+    (r"\bWAFER\b",                                "WAFER",       0.95),
+    (r"\bLUG\b",                                  "LUG",         0.95),
+    (r"\bCLAMP\b",                                "CLAMP",       0.90),
+    (r"\bCOMPRESS(?:ION)?\b",                     "COMPRESSION", 0.90),
 ]
 
 

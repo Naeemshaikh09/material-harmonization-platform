@@ -1,37 +1,40 @@
 {
-  "_comment": "Terminology dictionary — owned by developer4. This is an empty template. developer4 fills entries.",
   "version": 1,
   "entries": [
-    {
-      "_comment_example": "Each entry has: term, replacement, kind, version, active",
-      "term": "VLV",
-      "replacement": "VALVE",
-      "kind": "ABBREVIATION",
-      "version": 1,
-      "active": true
-    },
-    {
-      "term": "FLGD",
-      "replacement": "FLANGED",
-      "kind": "ABBREVIATION",
-      "version": 1,
-      "active": true
-    },
-    {
-      "term": "150#",
-      "replacement": "CL150",
-      "kind": "RATING",
-      "version": 1,
-      "active": true
-    },
-    {
-      "term": "IN",
-      "replacement": "MM",
-      "kind": "UNIT",
-      "version": 1,
-      "active": true,
-      "conversion_factor": 25.4,
-      "canonical_unit": "MM"
-    }
+    {"term": "VLV", "replacement": "VALVE", "kind": "ABBREVIATION", "version": 1, "active": true},
+    {"term": "VLV.", "replacement": "VALVE", "kind": "ABBREVIATION", "version": 1, "active": true},
+    {"term": "FLG", "replacement": "FLANGED", "kind": "ABBREVIATION", "version": 1, "active": true},
+    {"term": "FLGD", "replacement": "FLANGED", "kind": "ABBREVIATION", "version": 1, "active": true},
+    {"term": "FLANG", "replacement": "FLANGED", "kind": "ABBREVIATION", "version": 1, "active": true},
+    {"term": "BW", "replacement": "BUTT_WELD", "kind": "ABBREVIATION", "version": 1, "active": true},
+    {"term": "BUTT WELD", "replacement": "BUTT_WELD", "kind": "ABBREVIATION", "version": 1, "active": true},
+    {"term": "SW", "replacement": "SOCKET_WELD", "kind": "ABBREVIATION", "version": 1, "active": true},
+    {"term": "THRD", "replacement": "THREADED", "kind": "ABBREVIATION", "version": 1, "active": true},
+    {"term": "NPT", "replacement": "THREADED", "kind": "ABBREVIATION", "version": 1, "active": true},
+    {"term": "CS", "replacement": "CARBON_STEEL", "kind": "MATERIAL", "version": 1, "active": true},
+    {"term": "SS", "replacement": "STAINLESS_STEEL", "kind": "MATERIAL", "version": 1, "active": true},
+    {"term": "SS316", "replacement": "SS316", "kind": "MATERIAL", "version": 1, "active": true},
+    {"term": "SS316L", "replacement": "SS316L", "kind": "MATERIAL", "version": 1, "active": true},
+    {"term": "SS304", "replacement": "SS304", "kind": "MATERIAL", "version": 1, "active": true},
+    {"term": "A216 WCB", "replacement": "A216WCB", "kind": "MATERIAL", "version": 1, "active": true},
+    {"term": "WCB", "replacement": "A216WCB", "kind": "MATERIAL", "version": 1, "active": true},
+    {"term": "CI", "replacement": "CAST_IRON", "kind": "MATERIAL", "version": 1, "active": true},
+    {"term": "150#", "replacement": "CL150", "kind": "RATING", "version": 1, "active": true},
+    {"term": "300#", "replacement": "CL300", "kind": "RATING", "version": 1, "active": true},
+    {"term": "600#", "replacement": "CL600", "kind": "RATING", "version": 1, "active": true},
+    {"term": "900#", "replacement": "CL900", "kind": "RATING", "version": 1, "active": true},
+    {"term": "1500#", "replacement": "CL1500", "kind": "RATING", "version": 1, "active": true},
+    {"term": "CLASS 150", "replacement": "CL150", "kind": "RATING", "version": 1, "active": true},
+    {"term": "CLASS 300", "replacement": "CL300", "kind": "RATING", "version": 1, "active": true},
+    {"term": "CLASS 600", "replacement": "CL600", "kind": "RATING", "version": 1, "active": true},
+    {"term": "IN", "replacement": "MM", "kind": "UNIT", "version": 1, "active": true, "conversion_factor": 25.4, "canonical_unit": "MM"},
+    {"term": "INCH", "replacement": "MM", "kind": "UNIT", "version": 1, "active": true, "conversion_factor": 25.4, "canonical_unit": "MM"},
+    {"term": "\"", "replacement": "MM", "kind": "UNIT", "version": 1, "active": true, "conversion_factor": 25.4, "canonical_unit": "MM"},
+    {"term": "MM", "replacement": "MM", "kind": "UNIT", "version": 1, "active": true, "conversion_factor": 1.0, "canonical_unit": "MM"},
+    {"term": "NB", "replacement": "MM", "kind": "UNIT", "version": 1, "active": true, "conversion_factor": 1.0, "canonical_unit": "MM"},
+    {"term": "DN", "replacement": "MM", "kind": "UNIT", "version": 1, "active": true, "conversion_factor": 1.0, "canonical_unit": "MM"},
+    {"term": "PCS", "replacement": "EA", "kind": "SYNONYM", "version": 1, "active": true},
+    {"term": "NOS", "replacement": "EA", "kind": "SYNONYM", "version": 1, "active": true},
+    {"term": "NO", "replacement": "EA", "kind": "SYNONYM", "version": 1, "active": true}
   ]
 }

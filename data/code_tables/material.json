@@ -1,0 +1,14 @@
+{
+  "name": "material",
+  "values": [
+    {"code": "0000", "label": "N/A", "canonical": "NA", "status": "ACTIVE"},
+    {"code": "0017", "label": "STAINLESS STEEL 316", "canonical": "SS316", "status": "ACTIVE"},
+    {"code": "0018", "label": "STAINLESS STEEL 316L", "canonical": "SS316L", "status": "ACTIVE"},
+    {"code": "0019", "label": "STAINLESS STEEL 304", "canonical": "SS304", "status": "ACTIVE"},
+    {"code": "0020", "label": "ASTM A216 GRADE WCB", "canonical": "A216WCB", "status": "ACTIVE"},
+    {"code": "0021", "label": "CARBON STEEL", "canonical": "CARBON_STEEL", "status": "ACTIVE"},
+    {"code": "0022", "label": "CAST IRON", "canonical": "CAST_IRON", "status": "ACTIVE"},
+    {"code": "0023", "label": "ASTM A106 GRADE B", "canonical": "A106B", "status": "ACTIVE"},
+    {"code": "0024", "label": "CHROME STEEL", "canonical": "CHROME_STEEL", "status": "ACTIVE"}
+  ]
+}

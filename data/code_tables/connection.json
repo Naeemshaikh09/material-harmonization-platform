@@ -1,0 +1,12 @@
+{
+  "name": "connection",
+  "values": [
+    {"code": "0000", "label": "N/A", "canonical": "NA", "status": "ACTIVE"},
+    {"code": "0001", "label": "FLANGED", "canonical": "FLANGED", "status": "ACTIVE"},
+    {"code": "0002", "label": "BUTT WELD", "canonical": "BUTT_WELD", "status": "ACTIVE"},
+    {"code": "0003", "label": "SOCKET WELD", "canonical": "SOCKET_WELD", "status": "ACTIVE"},
+    {"code": "0004", "label": "THREADED (NPT)", "canonical": "THREADED", "status": "ACTIVE"},
+    {"code": "0005", "label": "WAFER", "canonical": "WAFER", "status": "ACTIVE"},
+    {"code": "0006", "label": "LUG", "canonical": "LUG", "status": "ACTIVE"}
+  ]
+}

@@ -17,7 +17,10 @@ import json
 import os
 from typing import Dict, Optional
 
-from .schemas import AttributeResult
+try:
+    from .schemas import AttributeResult
+except ImportError:
+    from schemas import AttributeResult
 
 CONFIDENCE_THRESHOLD = float(os.environ.get("CONFIDENCE_THRESHOLD", "0.50"))
 
@@ -105,8 +108,22 @@ def _is_valid_value(attribute_name: str, value: str, class_code: Optional[str]) 
     if not table:
         return True  # table not loaded yet
 
-    # Check against canonical values
-    return value.upper() in {k.upper() for k in table.keys()}
+    val_upper = str(value).upper().strip()
+    valid_keys = {k.upper() for k in table.keys()}
+
+    if val_upper in valid_keys:
+        return True
+
+    # Smart prefix checks for pressure ratings e.g. "150" -> "CL150", "300" -> "CL300"
+    if f"CL{val_upper}" in valid_keys or f"PN{val_upper}" in valid_keys:
+        return True
+
+    # Digit / substring comparison helper for numeric tables
+    digits = re.sub(r"[^\d]", "", val_upper)
+    if digits and any(digits in k for k in valid_keys):
+        return True
+
+    return False
 
 
 # ---------------------------------------------------------------------------

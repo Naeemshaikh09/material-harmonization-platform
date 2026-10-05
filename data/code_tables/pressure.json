@@ -1,0 +1,13 @@
+{
+  "name": "pressure",
+  "values": [
+    {"code": "0000", "label": "N/A", "canonical": "NA", "status": "ACTIVE"},
+    {"code": "0150", "label": "CLASS 150", "canonical": "CL150", "status": "ACTIVE"},
+    {"code": "0300", "label": "CLASS 300", "canonical": "CL300", "status": "ACTIVE"},
+    {"code": "0600", "label": "CLASS 600", "canonical": "CL600", "status": "ACTIVE"},
+    {"code": "0900", "label": "CLASS 900", "canonical": "CL900", "status": "ACTIVE"},
+    {"code": "1500", "label": "CLASS 1500", "canonical": "CL1500", "status": "ACTIVE"},
+    {"code": "0016", "label": "PN 16", "canonical": "PN16", "status": "ACTIVE"},
+    {"code": "0040", "label": "PN 40", "canonical": "PN40", "status": "ACTIVE"}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "class",
+  "values": [
+    {"code": "0000", "label": "N/A", "canonical": "NA", "status": "ACTIVE"},
+    {"code": "0112", "label": "VALVE", "canonical": "VALVE", "status": "ACTIVE"},
+    {"code": "0113", "label": "PIPE", "canonical": "PIPE", "status": "ACTIVE"},
+    {"code": "0114", "label": "BEARING", "canonical": "BEARING", "status": "ACTIVE"}
+  ]
+}

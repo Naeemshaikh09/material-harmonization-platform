@@ -23,7 +23,10 @@ import logging
 import os
 from typing import Dict, Optional
 
-from .schemas import AttributeResult
+try:
+    from .schemas import AttributeResult
+except ImportError:
+    from schemas import AttributeResult
 
 logger = logging.getLogger(__name__)
 

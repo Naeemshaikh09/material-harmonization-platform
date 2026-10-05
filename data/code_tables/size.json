@@ -1,0 +1,17 @@
+{
+  "name": "size",
+  "values": [
+    {"code": "0000", "label": "N/A", "canonical": "NA", "status": "ACTIVE"},
+    {"code": "0015", "label": "15 MM (1/2\")", "canonical": "15", "status": "ACTIVE"},
+    {"code": "0020", "label": "20 MM (3/4\")", "canonical": "20", "status": "ACTIVE"},
+    {"code": "0025", "label": "25 MM (1\")", "canonical": "25", "status": "ACTIVE"},
+    {"code": "0040", "label": "40 MM (1-1/2\")", "canonical": "40", "status": "ACTIVE"},
+    {"code": "0050", "label": "50 MM (2\")", "canonical": "50", "status": "ACTIVE"},
+    {"code": "0080", "label": "80 MM (3\")", "canonical": "80", "status": "ACTIVE"},
+    {"code": "0100", "label": "100 MM (4\")", "canonical": "100", "status": "ACTIVE"},
+    {"code": "0150", "label": "150 MM (6\")", "canonical": "150", "status": "ACTIVE"},
+    {"code": "0200", "label": "200 MM (8\")", "canonical": "200", "status": "ACTIVE"},
+    {"code": "0250", "label": "250 MM (10\")", "canonical": "250", "status": "ACTIVE"},
+    {"code": "0300", "label": "300 MM (12\")", "canonical": "300", "status": "ACTIVE"}
+  ]
+}

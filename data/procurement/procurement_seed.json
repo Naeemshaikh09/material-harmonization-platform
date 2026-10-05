@@ -1,0 +1,35 @@
+[
+  {
+    "cpse_id": 1,
+    "cpse_code": "CPSE_A-10001",
+    "year": 2025,
+    "annual_qty": 200,
+    "uom": "EA",
+    "last_price": 4200.0,
+    "price_date": "2025-01-15",
+    "stock_qty": 45,
+    "is_synthetic": true
+  },
+  {
+    "cpse_id": 2,
+    "cpse_code": "CPSE_B-10001",
+    "year": 2025,
+    "annual_qty": 340,
+    "uom": "EA",
+    "last_price": 4850.0,
+    "price_date": "2025-02-10",
+    "stock_qty": 80,
+    "is_synthetic": true
+  },
+  {
+    "cpse_id": 3,
+    "cpse_code": "CPSE_C-10001",
+    "year": 2025,
+    "annual_qty": 150,
+    "uom": "EA",
+    "last_price": 4100.0,
+    "price_date": "2025-03-01",
+    "stock_qty": 20,
+    "is_synthetic": true
+  }
+]
