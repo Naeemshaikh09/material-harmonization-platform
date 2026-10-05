@@ -155,8 +155,9 @@ function extract(text: string): Attributes {
   };
   put("type", t.includes("BALL") ? "BALL" : t.includes("GATE") ? "GATE" : t.includes("GLOBE") ? "GLOBE" : t.includes("PIPE") ? "PIPE" : t.includes("BEARING") || t.includes("BRG") ? "BALL" : t.includes("STRAINER") ? "STRAINER" : undefined, undefined, 0.97);
   const dn = t.match(/DN\s?(\d+)/);
+  // Allow optional whitespace between number and IN/inch-mark: "2 IN", "2IN", '2"'
   const inch = t.match(/(\d+(?:\.\d+)?)\s*(?:IN\b|")/);
-  const size = dn ? dn[1] : inch ? INCH_TO_MM[inch[1]] ?? String(Number(inch[1]) * 25) : undefined;
+  const size = dn ? dn[1] : inch ? INCH_TO_MM[inch[1]] ?? String(Math.round(Number(inch[1]) * 25.4)) : undefined;
   put("primary_size", size, size ? "MM" : undefined, 0.95, dn ? dn[0] : inch?.[0]);
   const pr = t.match(/(?:CL|CLASS)\s?(\d+)/) ?? t.match(/(\d+)\s*#/);
   put("pressure", pr?.[1], pr ? "CLASS" : undefined, 0.94, pr?.[0]);
@@ -169,11 +170,13 @@ function extract(text: string): Attributes {
 }
 
 function goldenFromAttributes(a: Attributes): CmcDetail | undefined {
+  // Build a canonical key string from the 5 critical attributes of a given record.
   const key = (x: Attributes) =>
     ["type", "primary_size", "material", "pressure", "connection"]
-      .map((k) => (a[k as AttrKey]?.state === "KNOWN" ? a[k as AttrKey]!.value : "?"))
+      .map((k) => (x[k as AttrKey]?.state === "KNOWN" ? x[k as AttrKey]!.value : "?"))
       .join("|");
-  return goldenRecords.find((g) => g.status === "ACTIVE" && key(g.attributes) === key(a));
+  const searchKey = key(a);
+  return goldenRecords.find((g) => g.status === "ACTIVE" && key(g.attributes) === searchKey);
 }
 
 function stdDescription(a: Attributes, draft: boolean) {
